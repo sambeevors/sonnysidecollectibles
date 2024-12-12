@@ -1,39 +1,35 @@
-import Link from "next/link";
+import Link from 'next/link'
 
 export function Footer() {
   return (
     <footer className="bg-pink-100">
       <div className="container mx-auto px-4 py-8">
-        <div className="flex flex-col md:flex-row justify-between items-center">
-          <div className="mb-4 md:mb-0">
-            <h3 className="text-xl font-semibold mb-2">Contact Us</h3>
-            <p>Email: info@sonnysidecollectibles.com</p>
-          </div>
-          <div>
+        <div className="flex flex-col md:flex-row justify-center items-center gap-4">
+          <div className="text-center">
             <h3 className="text-xl font-semibold mb-2">Follow Us</h3>
-            <div className="flex space-x-4">
+            <div className="flex gap-4">
               <Link
-                href="https://www.instagram.com"
+                href="https://www.instagram.com/sonnyangel.watch/"
                 className="text-pink-600 hover:underline"
               >
-                Instagram
+                Sonny Angel Instagram
               </Link>
               <Link
-                href="https://www.facebook.com"
+                href="https://www.instagram.com/s18.culture/"
                 className="text-pink-600 hover:underline"
               >
-                Facebook
+                Yu-Gi-Oh / Pokémon Instagram
               </Link>
               <Link
-                href="https://www.twitter.com"
+                href="https://www.tiktok.com/@sonnyangel.watch"
                 className="text-pink-600 hover:underline"
               >
-                Twitter
+                TikTok
               </Link>
             </div>
           </div>
         </div>
       </div>
     </footer>
-  );
+  )
 }

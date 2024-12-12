@@ -1,7 +1,4 @@
 import './globals.css'
-import { Inter } from 'next/font/google'
-
-const inter = Inter({ subsets: ['latin'] })
 
 export const metadata = {
   title: 'Sonny Side Collectibles',
@@ -15,8 +12,10 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={`${inter.className} bg-pink-50`}>{children}</body>
+      <head>
+        <link rel="stylesheet" href="https://use.typekit.net/knu0ruh.css" />
+      </head>
+      <body className="font-sans bg-pink-50">{children}</body>
     </html>
   )
 }
-
