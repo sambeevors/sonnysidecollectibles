@@ -4,22 +4,29 @@ import { Footer } from '@/components/footer'
 
 export default function Home() {
   return (
-    <div className="flex flex-col min-h-screen text-pink-950">
+    <div className="flex flex-col min-h-screen text-burnt-toast">
       <main className="flex-grow">
-        <div className="relative h-[50vh] min-h-[400px] w-full">
+        <div className="relative h-auto w-full">
           <Image
             src="/hero.jpg"
             alt="Sonny Side Collectibles Hero"
             fill
             style={{ objectFit: 'cover' }}
             priority
+            className="absolute inset-0 z-[-1]"
           />
-          <div className="absolute inset-0 bg-pink-400/80 flex items-center justify-center">
-            <div className="text-center text-white drop-shadow">
-              <h1 className="text-4xl md:text-5xl font-bold mb-4">
-                Sonny Side Collectibles
-              </h1>
-              <p className="text-xl md:text-2xl">
+          <div className="bg-white/80 flex items-center justify-center py-8">
+            <div className="text-center text-burnt-toast">
+              <Image
+                src="/logo.png"
+                alt="Sonny Side Collectibles Logo"
+                width={1024}
+                height={1024}
+                className="mx-auto mb-6 w-full h-auto max-w-sm md:max-w-md"
+                priority
+              />
+              <h1 className="sr-only">Sonny Side Collectibles</h1>
+              <p className="text-xl md:text-2xl text-balance">
                 Your go-to place for trading Sonny Angels, Yu-Gi-Oh, and Pokémon
                 collectibles!
               </p>
@@ -27,16 +34,16 @@ export default function Home() {
           </div>
         </div>
 
-        <div className="container mx-auto px-4 py-8">
+        <div className="container mx-auto px-4 py-12">
           <section className="grid md:grid-cols-3 gap-8 mb-12">
-            <div className="bg-pink-50 p-6 rounded-lg shadow-md border-2 border-pink-300 flex flex-col">
+            <div className="bg-white p-6 rounded-lg shadow-sm shadow-burnt-toast/20 flex flex-col">
               <h2 className="sr-only">Sonny Angels</h2>
               <Image
                 src="/sonny-angel.png"
                 alt="Sonny Angels"
                 width={200}
                 height={200}
-                className="mx-auto mb-4 rounded-lg object-contain object-center h-48 w-auto"
+                className="mx-auto mb-4 rounded-lg object-contain object-left sm:object-center h-48 w-auto"
               />
               <p className="mb-4 flex-grow">
                 Discover our adorable Sonny Angels collection. Trade and find
@@ -44,19 +51,19 @@ export default function Home() {
               </p>
               <Link
                 href="https://www.vinted.co.uk/member/149711188-georgieehiggo"
-                className="text-pink-600 hover:underline"
+                className="text-yolk-dark hover:text-burnt-toast hover:underline"
               >
                 👼 Shop on Vinted
               </Link>
             </div>
-            <div className="bg-pink-50 p-6 rounded-lg shadow-md border-2 border-pink-300 flex flex-col">
+            <div className="bg-white p-6 rounded-lg shadow-sm shadow-burnt-toast/20 flex flex-col">
               <h2 className="sr-only">Yu-Gi-Oh</h2>
               <Image
                 src="/yu-gi-oh.png"
                 alt="Yu-Gi-Oh Cards"
                 width={200}
                 height={200}
-                className="mx-auto mb-4 rounded-lg object-contain object-center h-48 w-auto"
+                className="mx-auto mb-4 rounded-lg object-contain object-left sm:object-center h-48 w-auto"
               />
               <p className="mb-4 flex-grow">
                 Explore our vast selection of Yu-Gi-Oh cards. Find rare cards
@@ -64,19 +71,19 @@ export default function Home() {
               </p>
               <Link
                 href="https://www.ebay.co.uk/usr/uk-beevo"
-                className="text-pink-600 hover:underline"
+                className="text-yolk-dark hover:text-burnt-toast hover:underline"
               >
                 🧙‍♀️ Shop on eBay
               </Link>
             </div>
-            <div className="bg-pink-50 p-6 rounded-lg shadow-md border-2 border-pink-300 flex flex-col">
+            <div className="bg-white p-6 rounded-lg shadow-sm shadow-burnt-toast/20 flex flex-col">
               <h2 className="sr-only">Pokémon</h2>
               <Image
                 src="/pokemon.png"
                 alt="Pokémon Cards"
                 width={200}
                 height={200}
-                className="mx-auto mb-4 rounded-lg object-contain object-center h-48 w-auto"
+                className="mx-auto mb-4 rounded-lg object-contain object-left sm:object-center h-48 w-auto"
               />
               <p className="mb-4 flex-grow">
                 Gotta catch &apos;em all! Browse our Pokémon card collection and
@@ -84,15 +91,15 @@ export default function Home() {
               </p>
               <Link
                 href="https://www.ebay.co.uk/usr/uk-beevo"
-                className="text-pink-600 hover:underline"
+                className="text-yolk-dark hover:text-burnt-toast hover:underline"
               >
                 ⚡️ Shop on eBay
               </Link>
             </div>
           </section>
 
-          <section className="bg-pink-100 p-8 rounded-lg shadow-md mb-12">
-            <h2 className="text-3xl font-semibold mb-6 text-center">
+          <section className="bg-white p-8 rounded-lg mb-12 shadow-sm shadow-burnt-toast/20">
+            <h2 className="text-3xl font-semibold mb-6 sm:text-center">
               Sell or Trade Your Collectibles
             </h2>
             <div className="grid md:grid-cols-2 gap-8">
@@ -121,33 +128,46 @@ export default function Home() {
                 </ul>
               </div>
             </div>
-            <div className="text-center mt-6">
+            <div className="sm:text-center mt-6">
               <Link
                 href="https://www.instagram.com/sonnyangel.watch/"
-                className="bg-pink-600 text-white px-6 py-3 rounded-lg hover:bg-pink-700 transition-colors"
+                className="bg-yolk text-burnt-toast px-6 py-3 rounded-lg hover:bg-yolk-dark transition-colors font-semibold"
               >
                 Contact Us to Sell or Trade
               </Link>
             </div>
           </section>
 
-          <section className="text-center mb-12">
-            <h2 className="text-3xl font-semibold mb-4">
+          <section className="bg-white p-8 rounded-lg shadow-sm shadow-burnt-toast/20">
+            <h2 className="text-3xl font-semibold mb-6 sm:text-center">
               Why Choose Sonny Side Collectibles?
             </h2>
-            <ul className="flex flex-wrap justify-center gap-4 max-w-3xl mx-auto">
-              <li>
-                ✅&nbsp;Two passionate collectors dedicated to providing
-                high-quality items
+            <ul className="flex flex-wrap sm:justify-center gap-4 max-w-3xl mx-auto">
+              <li className="flex items-center gap-2">
+                <span className="text-yolk-dark">✓</span>
+                Two passionate collectors dedicated to providing high-quality
+                items
               </li>
-              <li>
-                ✅&nbsp;Wide variety of Sonny Angels, Yu-Gi-Oh, and Pokémon
-                collectibles
+              <li className="flex items-center gap-2">
+                <span className="text-yolk-dark">✓</span>
+                Wide variety of Sonny Angels, Yu-Gi-Oh, and Pokémon collectibles
               </li>
-              <li>✅&nbsp;Deal with graded, raw, and sealed collectibles</li>
-              <li>✅&nbsp;Fair trading and competitive pricing</li>
-              <li>✅&nbsp;Secure transactions through reputable platforms</li>
-              <li>✅&nbsp;Excellent customer service and fast shipping</li>
+              <li className="flex items-center gap-2">
+                <span className="text-yolk-dark">✓</span>
+                Deal with graded, raw, and sealed collectibles
+              </li>
+              <li className="flex items-center gap-2">
+                <span className="text-yolk-dark">✓</span>
+                Fair trading and competitive pricing
+              </li>
+              <li className="flex items-center gap-2">
+                <span className="text-yolk-dark">✓</span>
+                Secure transactions through reputable platforms
+              </li>
+              <li className="flex items-center gap-2">
+                <span className="text-yolk-dark">✓</span>
+                Excellent customer service and fast shipping
+              </li>
             </ul>
           </section>
         </div>

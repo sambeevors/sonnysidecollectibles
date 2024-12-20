@@ -54,6 +54,15 @@ export default {
           '4': 'hsl(var(--chart-4))',
           '5': 'hsl(var(--chart-5))',
         },
+        yolk: {
+          DEFAULT: '#fbcb25',
+          dark: '#e58d19',
+        },
+        eggwhite: {
+          DEFAULT: '#fcf9e1',
+          dark: '#ddb8a5',
+        },
+        'burnt-toast': '#300d13',
       },
       borderRadius: {
         lg: 'var(--radius)',

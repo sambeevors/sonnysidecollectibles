@@ -2,7 +2,7 @@ import Link from 'next/link'
 
 export function Footer() {
   return (
-    <footer className="bg-pink-100">
+    <footer className="bg-yolk">
       <div className="container mx-auto px-4 py-8">
         <div className="flex flex-col md:flex-row justify-center items-center gap-4">
           <div className="text-center">
@@ -10,19 +10,19 @@ export function Footer() {
             <div className="flex gap-4">
               <Link
                 href="https://www.instagram.com/sonnyangel.watch/"
-                className="text-pink-600 hover:underline"
+                className="text-burnt-toast hover:underline"
               >
                 Sonny Angel Instagram
               </Link>
               <Link
                 href="https://www.instagram.com/s18.culture/"
-                className="text-pink-600 hover:underline"
+                className="text-burnt-toast hover:underline"
               >
                 Yu-Gi-Oh / Pokémon Instagram
               </Link>
               <Link
                 href="https://www.tiktok.com/@sonnyangel.watch"
-                className="text-pink-600 hover:underline"
+                className="text-burnt-toast hover:underline"
               >
                 TikTok
               </Link>
