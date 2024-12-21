@@ -70,7 +70,7 @@ export default function Home() {
                 and complete your deck!
               </p>
               <Link
-                href="https://www.ebay.co.uk/usr/uk-beevo"
+                href="https://www.ebay.co.uk/usr/sonny-side-collectibles"
                 className="text-yolk-dark hover:text-burnt-toast hover:underline"
               >
                 🧙‍♀️ Shop on eBay
@@ -90,7 +90,7 @@ export default function Home() {
                 trade with fellow trainers.
               </p>
               <Link
-                href="https://www.ebay.co.uk/usr/uk-beevo"
+                href="https://www.ebay.co.uk/usr/sonny-side-collectibles"
                 className="text-yolk-dark hover:text-burnt-toast hover:underline"
               >
                 ⚡️ Shop on eBay
