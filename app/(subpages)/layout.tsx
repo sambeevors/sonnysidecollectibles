@@ -1,12 +1,12 @@
-import { Footer } from '@/components/footer'
-import { ModeToggle } from '@/components/mode-toggle'
-import { Egg } from 'lucide-react'
-import Link from 'next/link'
+import { Footer } from '@/components/footer';
+import { ModeToggle } from '@/components/mode-toggle';
+import { Egg } from 'lucide-react';
+import Link from 'next/link';
 
 export default function SubpageLayout({
   children,
 }: {
-  children: React.ReactNode
+  children: React.ReactNode;
 }) {
   return (
     <>
@@ -37,8 +37,10 @@ export default function SubpageLayout({
           <ModeToggle />
         </div>
       </nav>
-      <main className="container mx-auto px-4 py-8">{children}</main>
+      <main className="container mx-auto px-4 py-8 md:py-12 max-w-3xl">
+        {children}
+      </main>
       <Footer />
     </>
-  )
+  );
 }

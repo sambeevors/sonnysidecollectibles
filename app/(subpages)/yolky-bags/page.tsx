@@ -3,10 +3,10 @@ import {
   AccordionContent,
   AccordionItem,
   AccordionTrigger,
-} from '@/components/ui/accordion'
-import { Alert, AlertDescription, AlertTitle } from '@/components/ui/alert'
-import { Badge } from '@/components/ui/badge'
-import { Button } from '@/components/ui/button'
+} from '@/components/ui/accordion';
+import { Alert, AlertDescription, AlertTitle } from '@/components/ui/alert';
+import { Badge } from '@/components/ui/badge';
+import { Button } from '@/components/ui/button';
 import {
   Card,
   CardContent,
@@ -14,12 +14,12 @@ import {
   CardFooter,
   CardHeader,
   CardTitle,
-} from '@/components/ui/card'
-import { generateMetadata as baseGenerateMetadata } from '@/app/lib/metadata'
+} from '@/components/ui/card';
+import { generateMetadata as baseGenerateMetadata } from '@/app/lib/metadata';
 
-import { Package, Star, Truck } from 'lucide-react'
-import Image from 'next/image'
-import Link from 'next/link'
+import { Package, Star, Truck } from 'lucide-react';
+import Image from 'next/image';
+import Link from 'next/link';
 
 export const metadata = baseGenerateMetadata({
   title: 'Yolky Bags',
@@ -27,11 +27,11 @@ export const metadata = baseGenerateMetadata({
     'Mystery Pokémon graded card bags with guaranteed value and a chance at chase cards. Available in Soft-Boiled (£30) and Hard-Boiled (£75) options.',
   path: '/yolky-bags',
   type: 'article',
-})
+});
 
 export default function YolkyBagsPage() {
   return (
-    <div className="container mx-auto max-w-3xl px-4 py-12">
+    <>
       <header className="mb-8">
         <div className="flex items-center mb-4 gap-4">
           <div className="rounded-full hidden md:block">
@@ -267,7 +267,7 @@ export default function YolkyBagsPage() {
         </div>
       </section>
 
-      <section className="mb-10">
+      <section>
         <h2 className="text-xl font-semibold mb-6">
           Frequently Asked Questions
         </h2>
@@ -364,7 +364,27 @@ export default function YolkyBagsPage() {
             </AccordionContent>
           </AccordionItem>
         </Accordion>
+        <div className="mt-8">
+          <h3 className="text-lg font-medium mb-2">More questions?</h3>
+          <p className="text-sm text-muted-foreground">
+            Contact us on{' '}
+            <Link
+              href="https://www.whatnot.com/en-GB/user/sonnysidecollectibles"
+              className="underline"
+            >
+              Whatnot
+            </Link>{' '}
+            or{' '}
+            <Link
+              href="https://www.instagram.com/sonnysidecollectibles"
+              className="underline"
+            >
+              Instagram
+            </Link>{' '}
+            and we&apos;ll get back to you as soon as possible.
+          </p>
+        </div>
       </section>
-    </div>
-  )
+    </>
+  );
 }

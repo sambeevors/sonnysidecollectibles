@@ -1,14 +1,14 @@
-import { ShowCard } from '@/components/show-card'
+import { ShowCard } from '@/components/show-card';
 import {
   Accordion,
   AccordionContent,
   AccordionItem,
   AccordionTrigger,
-} from '@/components/ui/accordion'
-import { getUpcomingShows } from '@/data/shows'
-import { cn } from '@/lib/utils'
-import { Calendar, HeartCrack } from 'lucide-react'
-import { generateMetadata as baseGenerateMetadata } from '@/app/lib/metadata'
+} from '@/components/ui/accordion';
+import { getUpcomingShows } from '@/data/shows';
+import { cn } from '@/lib/utils';
+import { Calendar, HeartCrack } from 'lucide-react';
+import { generateMetadata as baseGenerateMetadata } from '@/app/lib/metadata';
 
 export const metadata = baseGenerateMetadata({
   title: 'Upcoming Shows',
@@ -16,13 +16,13 @@ export const metadata = baseGenerateMetadata({
     'Find Sonny Side Collectibles at upcoming card shows and conventions throughout the UK. See our event schedule and meet us in person.',
   path: '/upcoming-shows',
   type: 'article',
-})
+});
 
 export default function UpcomingShowsPage() {
-  const upcomingShows = getUpcomingShows()
+  const upcomingShows = getUpcomingShows();
 
   return (
-    <div className="container mx-auto max-w-3xl px-4 py-12">
+    <>
       <header className="mb-8">
         <div className="flex items-center mb-4 gap-4">
           <div className="bg-primary/10 p-5 rounded-full hidden md:block">
@@ -112,7 +112,7 @@ export default function UpcomingShowsPage() {
         </div>
       </section>
 
-      <section className="mb-10">
+      <section>
         <h2 className="text-xl font-semibold mb-6">
           Frequently Asked Questions
         </h2>
@@ -171,6 +171,6 @@ export default function UpcomingShowsPage() {
           </AccordionItem>
         </Accordion>
       </section>
-    </div>
-  )
+    </>
+  );
 }
