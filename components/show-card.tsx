@@ -77,7 +77,7 @@ export function ShowCard({ show }: ShowCardProps) {
                 show.imageMode === 'contain' ? 'object-contain' : 'object-cover'
               )}
             />
-            <div className="absolute bottom-0 inset-x-0 w-full h-32 bg-gradient-to-b from-transparent via-card/70 to-card"></div>
+            <div className="absolute bottom-0 inset-x-0 w-full h-32 bg-gradient-to-b from-transparent to-card"></div>
           </div>
         )}
         <div className="flex justify-between items-start z-10">
