@@ -1,9 +1,10 @@
+import { ThemeProvider } from '@/components/theme-provider'
+import { Button } from '@/components/ui/button'
+import Link from 'next/link'
 import './globals.css'
+import { generateMetadata as baseGenerateMetadata } from './lib/metadata'
 
-export const metadata = {
-  title: 'Sonny Side Collectibles',
-  description: 'Trade Sonny Angels, Yu-Gi-Oh, and Pokémon collectibles',
-}
+export const metadata = baseGenerateMetadata({})
 
 export default function RootLayout({
   children,
@@ -11,7 +12,7 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en">
+    <html lang="en" suppressHydrationWarning>
       <head>
         <link rel="stylesheet" href="https://use.typekit.net/knu0ruh.css" />
         <link
@@ -33,7 +34,24 @@ export default function RootLayout({
         />
         <link rel="manifest" href="/site.webmanifest" />
       </head>
-      <body className="font-sans bg-eggwhite">{children}</body>
+
+      <body className="antialiased bg-background text-foreground">
+        <ThemeProvider
+          attribute="class"
+          defaultTheme="system"
+          enableSystem
+          disableTransitionOnChange
+        >
+          {children}
+          <div className="fixed bottom-4 right-4 z-50">
+            <Button asChild className="rounded-full shadow-xl">
+              <Link href="https://www.whatnot.com/en-GB/user/sonnysidecollectibles">
+                📦 Live Singles / Yolky Bags
+              </Link>
+            </Button>
+          </div>
+        </ThemeProvider>
+      </body>
     </html>
   )
 }

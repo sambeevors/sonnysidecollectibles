@@ -9,22 +9,22 @@ export function Footer() {
             <h3 className="text-xl font-semibold mb-2">Follow Us</h3>
             <div className="flex flex-col md:flex-row gap-2 md:gap-4">
               <Link
-                href="https://www.instagram.com/sonnyangel.watch/"
-                className="text-burnt-toast hover:underline"
+                href="https://www.instagram.com/sonnysidecollectibles"
+                className="hover:underline"
               >
-                Sonny Angel Instagram
+                Instagram
               </Link>
               <Link
-                href="https://www.instagram.com/s18.culture/"
-                className="text-burnt-toast hover:underline"
+                href="https://www.whatnot.com/en-GB/user/sonnysidecollectibles"
+                className="hover:underline"
               >
-                Yu-Gi-Oh / Pokémon Instagram
+                Whatnot
               </Link>
               <Link
-                href="https://www.tiktok.com/@sonnyangel.watch"
-                className="text-burnt-toast hover:underline"
+                href="https://www.ebay.com/usr/sonny-side-collectibles"
+                className="hover:underline"
               >
-                TikTok
+                eBay
               </Link>
             </div>
           </div>
