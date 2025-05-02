@@ -1,15 +1,16 @@
-import { ThemeProvider } from '@/components/theme-provider'
-import { Button } from '@/components/ui/button'
-import Link from 'next/link'
-import './globals.css'
-import { generateMetadata as baseGenerateMetadata } from './lib/metadata'
+import { ThemeProvider } from '@/components/theme-provider';
+import { Button } from '@/components/ui/button';
+import { Analytics } from '@vercel/analytics/react';
+import Link from 'next/link';
+import './globals.css';
+import { generateMetadata as baseGenerateMetadata } from './lib/metadata';
 
-export const metadata = baseGenerateMetadata({})
+export const metadata = baseGenerateMetadata({});
 
 export default function RootLayout({
   children,
 }: {
-  children: React.ReactNode
+  children: React.ReactNode;
 }) {
   return (
     <html lang="en" suppressHydrationWarning>
@@ -51,7 +52,8 @@ export default function RootLayout({
             </Button>
           </div>
         </ThemeProvider>
+        <Analytics />
       </body>
     </html>
-  )
+  );
 }
