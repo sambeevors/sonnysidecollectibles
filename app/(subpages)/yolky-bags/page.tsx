@@ -3,10 +3,10 @@ import {
   AccordionContent,
   AccordionItem,
   AccordionTrigger,
-} from "@/components/ui/accordion";
-import { Alert, AlertDescription, AlertTitle } from "@/components/ui/alert";
-import { Badge } from "@/components/ui/badge";
-import { Button } from "@/components/ui/button";
+} from '@/components/ui/accordion'
+import { Alert, AlertDescription, AlertTitle } from '@/components/ui/alert'
+import { Badge } from '@/components/ui/badge'
+import { Button } from '@/components/ui/button'
 import {
   Card,
   CardContent,
@@ -14,11 +14,20 @@ import {
   CardFooter,
   CardHeader,
   CardTitle,
-} from "@/components/ui/card";
+} from '@/components/ui/card'
+import { generateMetadata as baseGenerateMetadata } from '@/app/lib/metadata'
 
-import { Package, Star, Truck } from "lucide-react";
-import Image from "next/image";
-import Link from "next/link";
+import { Package, Star, Truck } from 'lucide-react'
+import Image from 'next/image'
+import Link from 'next/link'
+
+export const metadata = baseGenerateMetadata({
+  title: 'Yolky Bags',
+  description:
+    'Mystery Pokémon graded card bags with guaranteed value and a chance at chase cards. Available in Soft-Boiled (£30) and Hard-Boiled (£75) options.',
+  path: '/yolky-bags',
+  type: 'article',
+})
 
 export default function YolkyBagsPage() {
   return (
@@ -139,7 +148,13 @@ export default function YolkyBagsPage() {
       </section>
 
       <section className="mb-10">
-        <Image width={1680} height={2731} src="/cracked.jpg" alt="Yolky Bags" />
+        <Image
+          width={1680}
+          height={2731}
+          src="/cracked.jpg"
+          alt="Examples of what could be inside a Yolky Bag"
+          className="rounded-xl overflow-hidden"
+        />
       </section>
 
       <section className="mb-10">
@@ -237,8 +252,8 @@ export default function YolkyBagsPage() {
           </div>
           <ul className="space-y-3">
             <li className="flex items-center justify-between">
-              <span>PSA 9 Bubble Mew (Paldean Fates)</span>
-              <Badge>£300 Value</Badge>
+              <span>PSA 10 Umbreon (Hidden Fates)</span>
+              <Badge>£350 Value</Badge>
             </li>
             <li className="flex items-center justify-between">
               <span>PSA 10 Cramorant Beauty Stamp Box</span>
@@ -351,5 +366,5 @@ export default function YolkyBagsPage() {
         </Accordion>
       </section>
     </div>
-  );
+  )
 }

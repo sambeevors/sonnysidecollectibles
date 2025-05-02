@@ -1,22 +1,31 @@
-import { ShowCard } from "@/components/show-card";
+import { ShowCard } from '@/components/show-card'
 import {
   Accordion,
   AccordionContent,
   AccordionItem,
   AccordionTrigger,
-} from "@/components/ui/accordion";
-import { getUpcomingShows } from "@/data/shows";
-import { cn } from "@/lib/utils";
-import { Calendar, HeartCrack } from "lucide-react";
+} from '@/components/ui/accordion'
+import { getUpcomingShows } from '@/data/shows'
+import { cn } from '@/lib/utils'
+import { Calendar, HeartCrack } from 'lucide-react'
+import { generateMetadata as baseGenerateMetadata } from '@/app/lib/metadata'
+
+export const metadata = baseGenerateMetadata({
+  title: 'Upcoming Shows',
+  description:
+    'Find Sonny Side Collectibles at upcoming card shows and conventions throughout the UK. See our event schedule and meet us in person.',
+  path: '/upcoming-shows',
+  type: 'article',
+})
 
 export default function UpcomingShowsPage() {
-  const upcomingShows = getUpcomingShows();
+  const upcomingShows = getUpcomingShows()
 
   return (
     <div className="container mx-auto max-w-3xl px-4 py-12">
       <header className="mb-8">
         <div className="flex items-center mb-4 gap-4">
-          <div className="bg-primary/10 p-4 rounded-full hidden md:block">
+          <div className="bg-primary/10 p-5 rounded-full hidden md:block">
             <Calendar className="w-10 h-10 text-primary" />
           </div>
           <div>
@@ -43,8 +52,8 @@ export default function UpcomingShowsPage() {
       {upcomingShows.length > 0 ? (
         <div
           className={cn(
-            "grid gap-6 mb-12",
-            upcomingShows.length >= 2 && "sm:grid-cols-2"
+            'grid gap-6 mb-12',
+            upcomingShows.length >= 2 && 'sm:grid-cols-2'
           )}
         >
           {upcomingShows.map((show) => (
@@ -163,5 +172,5 @@ export default function UpcomingShowsPage() {
         </Accordion>
       </section>
     </div>
-  );
+  )
 }

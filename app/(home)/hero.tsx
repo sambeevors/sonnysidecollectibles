@@ -1,5 +1,5 @@
-import { ModeToggle } from "@/components/mode-toggle";
-import Image from "next/image";
+import { ModeToggle } from '@/components/mode-toggle'
+import Image from 'next/image'
 
 const Hero = () => {
   return (
@@ -25,7 +25,7 @@ const Hero = () => {
         </div>
       </div>
     </header>
-  );
-};
+  )
+}
 
-export default Hero;
+export default Hero
