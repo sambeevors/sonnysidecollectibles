@@ -18,6 +18,7 @@ export default function SubpageLayout({
               className="mr-6 hover:rotate-9 hover:scale-110 transition"
             >
               <Egg className="size-6 text-white fill-white" />
+              <span className="sr-only">Home</span>
             </Link>
             <div className="space-x-4 md:space-x-6">
               <Link

@@ -62,9 +62,9 @@ export default function Home() {
                   <Calendar className="w-10 h-10 text-primary" />
                 </div>
                 <div>
-                  <h3 className="text-xl md:text-2xl font-bold text-shadow-2xs text-white dark:text-card-foreground">
+                  <h2 className="text-xl md:text-2xl font-bold text-shadow-2xs text-white dark:text-card-foreground">
                     Next Card Show: {nextShow.name}
-                  </h3>
+                  </h2>
                   <p className="text-sm text-white dark:text-card-foreground">
                     {formatDate(nextShow.date)}
                     {nextShow.endDate &&
