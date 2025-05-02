@@ -1,4 +1,4 @@
-import { Button } from '@/components/ui/button'
+import { Button } from '@/components/ui/button';
 import {
   Card,
   CardContent,
@@ -6,34 +6,34 @@ import {
   CardFooter,
   CardHeader,
   CardTitle,
-} from '@/components/ui/card'
-import { Badge } from '@/components/ui/badge'
-import { Calendar, MapPin, ExternalLink } from 'lucide-react'
-import { CardShow } from '@/data/shows'
-import Image from 'next/image'
-import Link from 'next/link'
-import { cn } from '@/lib/utils'
+} from '@/components/ui/card';
+import { Badge } from '@/components/ui/badge';
+import { Calendar, MapPin, ExternalLink } from 'lucide-react';
+import { CardShow } from '@/data/shows';
+import Image from 'next/image';
+import Link from 'next/link';
+import { cn } from '@/lib/utils';
 
 interface ShowCardProps {
-  show: CardShow
+  show: CardShow;
 }
 
 export function ShowCard({ show }: ShowCardProps) {
   // Format date for display
   const formatDate = (dateString: string) => {
-    const date = new Date(dateString)
+    const date = new Date(dateString);
     return date.toLocaleDateString('en-GB', {
       weekday: 'short',
       day: 'numeric',
       month: 'long',
       year: 'numeric',
-    })
-  }
+    });
+  };
 
   // Should be 30-31st August 2025, for example
   const formatDateRange = (startDate: string, endDate: string) => {
-    const start = new Date(startDate)
-    const end = new Date(endDate)
+    const start = new Date(startDate);
+    const end = new Date(endDate);
     return `${start.toLocaleDateString('en-GB', {
       weekday: 'short',
       day: 'numeric',
@@ -42,24 +42,24 @@ export function ShowCard({ show }: ShowCardProps) {
       day: 'numeric',
       month: 'long',
       year: 'numeric',
-    })}`
-  }
+    })}`;
+  };
 
-  const isMultiDay = !!show.endDate
-  const formattedStartDate = formatDate(show.date)
+  const isMultiDay = !!show.endDate;
+  const formattedStartDate = formatDate(show.date);
   const formattedDate = isMultiDay
     ? formatDateRange(show.date, show.endDate!)
-    : formattedStartDate
+    : formattedStartDate;
 
   // Calculate if this show is coming up soon (within next 14 days)
   const isSoon = () => {
-    const today = new Date()
-    today.setHours(0, 0, 0, 0)
-    const showDate = new Date(show.date)
-    const diffTime = Math.abs(showDate.getTime() - today.getTime())
-    const diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24))
-    return diffDays <= 14 && showDate >= today
-  }
+    const today = new Date();
+    today.setHours(0, 0, 0, 0);
+    const showDate = new Date(show.date);
+    const diffTime = Math.abs(showDate.getTime() - today.getTime());
+    const diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24));
+    return diffDays <= 14 && showDate >= today;
+  };
 
   return (
     <Card className="h-full flex flex-col overflow-hidden">
@@ -130,5 +130,5 @@ export function ShowCard({ show }: ShowCardProps) {
         </div>
       </CardFooter>
     </Card>
-  )
+  );
 }
