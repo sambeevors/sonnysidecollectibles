@@ -47,7 +47,7 @@ export default function YolkyBagsPage() {
             <h1 className="text-4xl font-bold tracking-tight mb-0.5">
               Yolky Bags
             </h1>
-            <p className="text-xl font-medium">How does it work?</p>
+            <p className="text-lg font-medium">How does it work?</p>
           </div>
         </div>
       </header>
